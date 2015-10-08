@@ -8,6 +8,7 @@ public class MainActivity extends AppCompatActivity {
     // Explicit
     private UserTABLE objUserTABLE;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,7 +16,16 @@ public class MainActivity extends AppCompatActivity {
 
         // Create & Connect Database
         createDatabase();
+
+        //Test Add Value SQLite
+        testAddValue();
     } // onCreate
+
+    private void testAddValue() {
+
+        objUserTABLE.addNewUser("User", "Password", "Name", "Age", "Sex", "Weight", "Height");
+
+    }
 
     private void createDatabase() {
         objUserTABLE = new UserTABLE(this);  // this เรียกใช้ constructor UserTABLE
