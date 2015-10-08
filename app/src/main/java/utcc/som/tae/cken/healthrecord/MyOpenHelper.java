@@ -17,7 +17,7 @@ public class MyOpenHelper extends SQLiteOpenHelper{
     // ต้องขึ้นต้นด้วย _id
 
     public MyOpenHelper(Context context) {
-        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);  //super สั่งให้ทำอัติโนมัติ
     } // Constructor
 
     @Override
